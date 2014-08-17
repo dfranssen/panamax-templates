@@ -1,0 +1,20 @@
+---
+name: Continuous Integration with Jenkins and Artifactory
+description: Continuous Integration setup for Java apps
+keywords: ci, jenkins, artifactory, java
+type: Java
+documentation: see README of individual docker images
+images:
+- name: dfranssen_docker-jenkins-master_latest
+  source: dfranssen/docker-jenkins-master:latest
+  category: CI
+  type: Default
+  ports:
+  - host_port: '8080'
+    container_port: '8080'
+    proto: TCP
+  volumes:
+  - host_path: "/var/user-docker-volumes/dfranssen_docker-jenkins-master_latest/jenkins-data"
+    container_path: "/var/lib/jenkins"
+  - host_path: "/var/user-docker-volumes/dfranssen_docker-jenkins-master_latest/maven"
+    container_path: "/var/lib/maven"
