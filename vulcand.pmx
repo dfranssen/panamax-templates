@@ -1,0 +1,17 @@
+---
+name: vulcand
+description: vulcand
+keywords: reverse_proxy, vulcand
+type: Default
+documentation: vulcand setup
+images:
+- name: mailgun_vulcand_latest
+  source: mailgun/vulcand:latest
+  type: Default
+  ports:
+  - host_port: '80'
+    container_port: '8181'
+    proto: TCP
+  - host_port: '8182'
+    container_port: '8182'
+    proto: TCP
