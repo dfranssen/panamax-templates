@@ -1,4 +1,4 @@
 panamax-templates
 =================
 
-Panamax templated for wiring Docker images
+Panamax template for wiring Docker images
